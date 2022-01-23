@@ -15,7 +15,7 @@ process.on('exit', exitHandler);
 process.on('SIGINT', exitHandler);
 process.on('uncaughtException', exitHandler);
 
-app.listen(8080, () => console.log('listening on port 8080'));
+app.listen( process.env.PORT || 5000, () => console.log('listening on port 8080'));
 
 function exitHandler() {
     fs.writeFileSync('counts.txt', `${count}`);
