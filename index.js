@@ -22,5 +22,5 @@ app.get('/', (_, res) => {
     count++;
     res.render('index', {clicks: count});
 });
-
+console.log('Ezra was here, BITCH!');
 app.listen(port, () => console.log('listening on port: ' + port));
